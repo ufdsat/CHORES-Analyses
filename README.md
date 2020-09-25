@@ -28,10 +28,10 @@ To run the code:
 * random
 
 ## Run the Models
- The repository two python files run.py and run_mets.py to run classification and regressiont task respectively.   
+ The repository has two python files run.py and run_mets.py to run classification and regressiont task respectively.   
   ### For classification   
   Instatiate the class ```ActivityRecognition``` from run.py. The '''__init__''' method of class takes the task argument
-  and whether to learned neural network weights. Task can only be one of the three 'sedentary','locomotion','lifestyle'. 
+  and whether to save learned neural network weights. Task can only be one of the three 'sedentary','locomotion','lifestyle'. 
   
   ```
   from run import ActivityRecogniton
@@ -56,6 +56,7 @@ To run the code:
   The above image shows 'sedentary_f1-score.csv'. Every [i,j] th entry corresponds to models f1-score when batch 'i' is the test set, batch
   'j' is the validations set and all the other batches are part of training set. The highlighted number '0.800891' is the f1-score performace 
    of the model when the test set is batch 2, validation set is batch 6 and rest 8 batches are training set.   
+   
    ### For METs estimation
    Instatiate the class ```MetEstimation``` from run_mets.py. 
    
@@ -65,7 +66,7 @@ To run the code:
   object.looprun()
   ```   
   MET estimation is regression task. We used the same model architecture as classification task but got rid of the sigmoid 
-  actionvation in the last layer. The run saves the weigths, history, plots and metrics. We only used the root means squrare
+  activation in the last layer. The run saves the weigths, history, plots and metrics. We only used the root means squrare
   error (RMSE) metric for the METS estimation.
   
    
